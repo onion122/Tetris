@@ -1,0 +1,14 @@
+package tetris;
+
+public class GameController {
+	private Board board;
+	private Tetromino currentPiece;
+	private int score;
+	
+	public GameController() {
+		
+		
+		
+	}
+	
+}
