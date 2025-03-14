@@ -1,4 +1,4 @@
-package Tetris;
+package tetris;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
@@ -24,19 +24,6 @@ class TetrisTest {
 	void testPieceCanMoveDown() {
 		Tetromino piece = new Tetromino(new Point[] {new Point(4,0), new Point(5,0)}, Color.RED);
 		assertTrue(board.canMove(piece, 0, 1), "La pieza debería moverse hacia abajo.");
-	}
-	
-	@Test
-	void testPieceCannotMoveOutsideLeft() {
-		Tetromino piece = new Tetromino(new Point[] {new Point(0,0), new Point(1,0), Color.BLUE});
-		assertFalse(board.canMove(piece, -1, 0), "La pieza no debería moverse fuera del borde izquierdo.");
-	}
-	
-	@Test
-	void testLineClearIncreaseScore() {
-		for (int x = 0; x <10; x++) {
-			board.grid[19][x] = Color.GREEN;
-		}
 	}
 	
 }
